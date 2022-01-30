@@ -2,9 +2,9 @@ clear all;
 close all;
 clc;
 
-path1 = 'C:\Users\giaco\OneDrive\Desktop\images\pokemon\resources\erba';
-path2 = 'C:\Users\giaco\OneDrive\Desktop\images\pokemon\resources\acqua';
-path3 = 'C:\Users\giaco\OneDrive\Desktop\images\pokemon\resources\fuoco';
+path1 = 'resources\erba';
+path2 = 'resources\acqua';
+path3 = 'resources\fuoco';
 
 % Get list of all BMP files in this directory
 % DIR returns as a structure array.  You will need to use () and . to get
@@ -120,15 +120,6 @@ for c = 1:length(dataset)
         dataset_filtered(:,col) = dataset(:,c);
     end
 end
-
-%assign label manually
-% cl1 = [1,2,4,12,13,14,20]; %erba
-% cl2 = [5,8,9,10,15,17,19]; %acqua
-% cl3 = [3,6,7,11,16,18,21]; %fuoco
-% 
-% dataset_filtered(cl1,length(dataset_filtered)) = 1;
-% dataset_filtered(cl2,length(dataset_filtered)) = 2;
-% dataset_filtered(cl3,length(dataset_filtered)) = 3;
 
 dataset_filtered(1:num_obj1,length(dataset_filtered)+1) = 1;
 dataset_filtered(num_obj1+1:num_obj1+num_obj2,length(dataset_filtered)) = 2;
