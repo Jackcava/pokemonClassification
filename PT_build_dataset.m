@@ -2,9 +2,9 @@ clear all;
 close all;
 clc;
 
-path1 = 'resources\erba';
-path2 = 'resources\acqua';
-path3 = 'resources\fuoco';
+path1 = 'resources\ERBA';
+path2 = 'resources\ACQUA';
+path3 = 'resources\FUOCO';
 
 % Get list of all BMP files in this directory
 % DIR returns as a structure array.  You will need to use () and . to get
